@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_schr.c                                        :+:      :+:    :+:   */
+/*   ft_lsadd_front.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isaridas <isaridas@student.42istanbul.com  +#+  +:+       +#+        */
+/*   By: isaridas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 00:27:02 by isaridas          #+#    #+#             */
-/*   Updated: 2022/10/10 13:39:38 by isaridas         ###   ########.fr       */
+/*   Created: 2022/10/14 20:10:08 by isaridas          #+#    #+#             */
+/*   Updated: 2022/10/14 20:20:36 by isaridas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_lsadd_front(t_list **lst, t_list *new)
 {
-	int		i;
-
-	if (s == 0)
-		return (NULL);
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == (char)c)
-			return ((char *)s + i);
-		i++;
-	}
-	if (s[i] == (char)c)
-		return ((char *)s + i);
-	return (NULL);
+	if (lst == 0 || new == 0)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }
