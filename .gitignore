@@ -1,2 +1,7 @@
 /venv
 /libftTester
+test.c
+tset.sh
+test_bonus.c
+test_bonus.sh
+test_good_fd
