@@ -6,7 +6,7 @@
 /*   By: isaridas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 20:25:10 by isaridas          #+#    #+#             */
-/*   Updated: 2022/10/14 20:27:14 by isaridas         ###   ########.fr       */
+/*   Updated: 2022/10/15 16:04:31 by isaridas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	if (!lst)
+	t_list	*temp;
 
-	while (lst->next)
-		lst = lst->next;
-	return (lst);
+	if (lst == NULL)
+		return (NULL);
+	temp = lst;
+	while (temp->next)
+		temp = temp->next;
+	return (temp);
 }
-

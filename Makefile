@@ -6,7 +6,7 @@
 #    By: isaridas <isaridas@student.42istanbul.com  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/06 19:12:24 by isaridas          #+#    #+#              #
-#    Updated: 2022/10/06 19:14:15 by isaridas         ###   ########.fr        #
+#    Updated: 2022/10/15 16:31:04 by isaridas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,5 +45,9 @@ re:				fclean $(NAME)
 
 bonus:			$(OBJS) $(BONUS_OBJS)
 				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+
+so:
+	$(CC) -fPIC $(CFLAGS) $(SRCS)
+	gcc -shared -o libft.so $(OBJS)
 
 .PHONY:			all clean fclean re bonus
