@@ -1,0 +1,1 @@
+In strncmp.c why we need to cast return value to unsigned char?
