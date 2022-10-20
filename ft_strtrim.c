@@ -48,6 +48,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		str[k] = s1[i++];
 		k++;
 	}
-	str[i] = 0;
+	str[k] = 0;
 	return (str);
 }
