@@ -6,7 +6,7 @@
 /*   By: isaridas <isaridas@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 13:40:14 by isaridas          #+#    #+#             */
-/*   Updated: 2022/10/15 13:45:27 by isaridas         ###   ########.fr       */
+/*   Updated: 2022/11/01 16:06:04 by isaridas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*temp;
 
-	if (lst == NULL || del == NULL)
+	if (lst == NULL)
 		return ;
 	while (*lst)
 	{
